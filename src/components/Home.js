@@ -1,6 +1,17 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { motion } from 'framer-motion';
-import Letter from '../img/T.jpg';
+import { NavContext } from '../contexts/NavContext';
+import LetterA from '../img/A.jpg';
+import LetterB from '../img/B.jpg';
+import LetterE from '../img/E.jpg';
+import LetterI from '../img/I.jpg';
+import LetterN from '../img/N.jpg';
+import LetterO from '../img/O.jpg';
+import LetterR from '../img/R.jpg';
+import LetterS from '../img/S.jpg';
+import LetterT from '../img/T.jpg';
+import SpaceDe from '../img/SPACE.jpg';
+import SpaceEn from '../img/SPACEEN.jpg';
 
 const containerVariants = {
     hidden: {
@@ -45,7 +56,8 @@ const nameVariants2 = {
         opacity: 0
     },
     visible: {
-        opacity: 1
+        opacity: 1,
+        boxShadow: "0px 0px 12px rgb(255, 200, 255)"
     },
     transition: {
         delay: 1.5,
@@ -54,6 +66,7 @@ const nameVariants2 = {
 }
 
 const Home = () => {
+    const { isGerman } = useContext(NavContext);
     return(
         <motion.div
         variants={containerVariants}
@@ -63,68 +76,71 @@ const Home = () => {
         className="flex flex-col flex-wrap items-center justify-center lg:overflow-hidden min-h-screen2 mx-auto p-6"
         >
             <div className="flex flex-col md:flex-row flex-wrap justify-center">
-                <div className="flex flex-row flex-wrap justify-center mb-4 md:mb-0">
+                
+                <div className="flex flex-row flex-shrink justify-center my-4">
                 <motion.div
                     variants={nameVariants}
-                    className="block rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block rounded m-1"><img src={LetterT} alt="letter" className="rounded" />
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded"/>
+                    className="block  rounded m-1"><img src={LetterO} alt="letter" className="rounded"/>
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block  rounded m-1"><img src={LetterB} alt="letter" className="rounded" />
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block  rounded m-1"><img src={LetterI} alt="letter" className="rounded" />
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block  rounded m-1"><img src={LetterA} alt="letter" className="rounded" />
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block  rounded m-1"><img src={LetterS} alt="letter" className="rounded" />
                 </motion.div>
                 </div>
-                <div className="flex flex-row flex-wrap justify-center mb-4 md:mb-0">
+
+                <div className="flex flex-row flex-shrink justify-center my-4">
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1 md:ml-10"><img src={Letter} alt="letter" className="rounded" />
+                    className="block  rounded m-1 md:ml-10"><img src={LetterS} alt="letter" className="rounded" />
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block  rounded m-1"><img src={LetterT} alt="letter" className="rounded" />
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block  rounded m-1"><img src={LetterE} alt="letter" className="rounded" />
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block  rounded m-1"><img src={LetterI} alt="letter" className="rounded" />
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block  rounded m-1"><img src={LetterN} alt="letter" className="rounded" />
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block  rounded m-1"><img src={LetterE} alt="letter" className="rounded" />
                 </motion.div>
                 <motion.div
                     variants={nameVariants}
-                    className="block  rounded m-1"><img src={Letter} alt="letter" className="rounded" />
+                    className="block rounded m-1"><img src={LetterR} alt="letter" className="rounded" />
                 </motion.div>
                 </div>
             </div>
 
-            <div className="flex flex-row flex-wrap justify-center">
+            <div className="flex flex-row flex-wrap justify-center my-4">
                 <motion.div
                     variants={nameVariants2} 
-                    className="text-4xl md:">WEBENTWICKLER
+                    className="block  rounded">
+                        { isGerman ? <img src={SpaceDe} alt="letter" className="rounded" /> : <img src={SpaceEn} alt="letter" className="rounded" /> }
                 </motion.div>
             </div>
             
