@@ -82,7 +82,7 @@ const Contact = () => {
                 </div>
                 <div className="my-4">
                     <label htmlFor="email" className="block">{contactContent[0].email}</label>
-                    <input id="email" type="text" value={email} onChange={ (e) => setEmail(e.target.value) } className="appearance-none w-full text-gray-700 border border-gray-500 rounded py-3 px-4" />
+                    <input id="email" type="email" value={email} onChange={ (e) => setEmail(e.target.value) } className="appearance-none w-full text-gray-700 border border-gray-500 rounded py-3 px-4" />
                 </div>
                 <div className="my-4">
                     <label htmlFor="betreff" className="block">{contactContent[0].betreff}</label>
