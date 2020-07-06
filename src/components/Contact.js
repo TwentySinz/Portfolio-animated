@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { NavContext } from '../contexts/NavContext';
 
@@ -31,9 +31,39 @@ const buttonVariants = {
     }
 }
 
+
+
 const Contact = () => {
     const { contactDe, contactEn, isGerman } = useContext(NavContext);
     const contactContent = isGerman ? contactDe : contactEn;
+    const [ name, setName ] = useState('');
+    const [ email, setEmail ] = useState('');
+    const [ subject, setSubject ] = useState('');
+    const [ message, setMessage ] = useState('');
+    const [ status,setStatus ] = useState('');
+
+    const encode = (data) => {
+        const formData = new FormData();
+        Object.keys(data).forEach((k)=>{
+          formData.append(k,data[k])
+        });
+        return formData
+      }
+    
+    const handleSubmit = (e) => {
+        const data = { "form-name" : "contact", name, email, subject, message };
+
+        fetch("/", {
+            method: "POST",
+            body: encode(data)
+        }).then(
+            () => setStatus("Form submission successful.")
+        ).catch(
+            error => setStatus("Form submission failed")
+        );
+        e.preventDefault();
+    }
+    
     return(
         <div className="lg:overflow-hidden">
         <motion.div
@@ -45,22 +75,22 @@ const Contact = () => {
         >
             <h2 className="text-3xl ">{contactContent[0].headline}</h2>
 
-            <form className="">
+            <form onSubmit={handleSubmit} className="">
                 <div className="my-4">
                     <label htmlFor="name" className="block">{contactContent[0].name}</label>
-                    <input id="name" type="text" className="appearance-none w-full text-gray-700 border border-gray-500 rounded py-3 px-4" />
+                    <input id="name" type="text" value={name} onChange={ (e) => setName(e.target.value) } className="appearance-none w-full text-gray-700 border border-gray-500 rounded py-3 px-4" />
                 </div>
                 <div className="my-4">
                     <label htmlFor="email" className="block">{contactContent[0].email}</label>
-                    <input id="email" type="text" className="appearance-none w-full text-gray-700 border border-gray-500 rounded py-3 px-4" />
+                    <input id="email" type="text" value={email} onChange={ (e) => setEmail(e.target.value) } className="appearance-none w-full text-gray-700 border border-gray-500 rounded py-3 px-4" />
                 </div>
                 <div className="my-4">
                     <label htmlFor="betreff" className="block">{contactContent[0].betreff}</label>
-                    <input id="betreff" type="text" className="appearance-none w-full text-gray-700 border border-gray-500 rounded py-3 px-4" />
+                    <input id="betreff" type="text" value={subject} onChange={ (e) => setSubject(e.target.value) } className="appearance-none w-full text-gray-700 border border-gray-500 rounded py-3 px-4" />
                 </div>
                 <div className="my-4">
                     <label htmlFor="nachricht" className="block">{contactContent[0].message}</label>
-                    <textarea id="nachricht" className="appearance-none resize-none w-full   h-32 text-gray-700 border border-gray-500 rounded py-3 px-4"/>
+                    <textarea id="nachricht" value={message} onChange={ (e) => setMessage(e.target.value) } className="appearance-none resize-none w-full   h-32 text-gray-700 border border-gray-500 rounded py-3 px-4"/>
                 </div>
                 <motion.button
                     variants={buttonVariants}
@@ -71,6 +101,7 @@ const Contact = () => {
                 </motion.button>
                 </form>
         </motion.div>
+        <h3>{status}</h3>
         </div>
     )
 }
