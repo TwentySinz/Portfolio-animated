@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { NavContext } from '../contexts/NavContext';
 import { motion } from 'framer-motion';
+import Portrait from '../img/bild2.jpg';
 
 const containerVariants = {
     hidden: {
@@ -31,10 +32,14 @@ const About = () => {
             initial="hidden"
             animate="visible"
             exit="exit"
-            className="md:w-1/2 min-h-screen2 mx-auto p-4"
+            className="md:w-1/2 lg:w-1/3 min-h-screen2 mx-auto p-4"
         >
             <h2 className="text-3xl text-white my-4">{aboutContent[0].headline}</h2>
-            <p className="text-white">{aboutContent[0].text}</p>
+            <p className="text-white text-justify">
+                <img src={Portrait} alt="portrait" className="w-40 float-right ml-6 p-2 border rounded-sm" />
+                {aboutContent[0].text1}  
+                {aboutContent[0].text2}
+             </p>
         </motion.div>
         </div>
     )

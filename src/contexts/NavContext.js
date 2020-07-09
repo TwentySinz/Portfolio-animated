@@ -21,12 +21,14 @@ const NavContextProvider = (props) => {
 
     const aboutDe = useState({
         headline: 'Über mich',
-        text: 'Hallo, wie gehts?'
+        text1: 'Hallo, es freut mich, dass Du Dich auf meine Homepage verirrt hast. Ich heiße Tobias und beschäftige mich seit 2020 intensiv mit dem Thema Webentwicklung, speziell der Frontend-Entwicklung in React. Meine ersten Erfahrungen im Bereich der Programmierung sammelte ich während meines Mathematikstudiums an der Beuth Hochschule für Technik in Berlin, wo ich die Programmiersprachen C++ und Java erlernte. Nach meinem Studium arbeitete ich eine Zeit lang in der Datenmigration, bis mich mein Weg zur Webentwicklung führte.', 
+        text2: 'Zur Zeit arbeite ich an diversen Webprojekten um meine Programmierkenntnisse im Bereich React zu vertiefen. Langfristig strebe ich eine Position als Webentwickler an und bin momentan auf der Suche nach einem Praktikum in der React-Entwicklung. Falls ich also Dein Interesse geweckt haben sollte und Du ein potenzieller Arbeitgeber bist, kannst Du mir gerne über mein Kontaktformular eine Email schreiben.'
     })
     
     const aboutEn = useState({
         headline: 'About Me',
-        text: 'Hello, whats up?'
+        text1: 'Hello, and welcome to my little homepage. My name is Tobias and since 2020 I am engaged in web development, particularly frontend development in React. I was introduced to programming during my studies in mathematics at Beuth Hochschule für Technik in Berlin, where I learned C++ and Java. After finishing university I worked in data migration for a while, until my interest in web development started to grow.',
+        text2: 'Currently I am working on several projects to improve my programming skils in React. Furthermore I am looking for an internship in React develpment to become a web developer in the long run. So if you are interested in my work or simply like my homepage, I would be glad if you would write me an email via my contact form.'
     })
 
     const projectsDe = useState({
