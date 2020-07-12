@@ -22,7 +22,7 @@ const NavContextProvider = (props) => {
     const aboutDe = useState({
         headline: 'Über mich',
         text1: 'Hallo, es freut mich, dass Du Dich auf meine Homepage verirrt hast. Ich heiße Tobias und beschäftige mich seit 2020 intensiv mit dem Thema Webentwicklung, speziell der Frontend-Entwicklung in React. Meine ersten Erfahrungen im Bereich der Programmierung sammelte ich während meines Mathematikstudiums an der Beuth Hochschule für Technik in Berlin, wo ich die Programmiersprachen C++ und Java erlernte. Nach meinem Studium arbeitete ich eine Zeit lang in der Datenmigration, bis mich mein Weg zur Webentwicklung führte.', 
-        text2: 'Zur Zeit arbeite ich an diversen Webprojekten um meine Programmierkenntnisse im Bereich React zu vertiefen. Langfristig strebe ich eine Position als Webentwickler an und bin momentan auf der Suche nach einem Praktikum in der React-Entwicklung. Falls ich also Dein Interesse geweckt haben sollte und Du ein potenzieller Arbeitgeber bist, kannst Du mir gerne über mein Kontaktformular eine Email schreiben.'
+        text2: 'Zur Zeit arbeite ich an diversen Webprojekten, um meine Programmierkenntnisse im Bereich React zu vertiefen. Langfristig strebe ich eine Position als Webentwickler an und bin momentan auf der Suche nach einem Praktikum in der React-Entwicklung. Falls ich also Dein Interesse geweckt haben sollte und Du ein potenzieller Arbeitgeber bist, kannst Du mir gerne über mein Kontaktformular eine E-mail schreiben.'
     })
     
     const aboutEn = useState({
@@ -45,14 +45,14 @@ const NavContextProvider = (props) => {
               text: 'ist eine Beispiel-Website für einen Online Blog, der sich mit Mathematik beschäftigt. Dabei wurden die Blogartikel in Markdown Files erstellt. Die verwendeten Technologien sind Gatsby und Tailwind CSS.', 
               linkHomepage: 'https://relaxed-hopper-d3fcc6.netlify.app/',
               linkGithub: 'https://github.com/',
-              id: 2 
+              id: 2
             },
             
               { headline: 'Blankenfelder Hofladen', 
                 text: 'ist eine Info-Website für einen Hofladen in Berlin. Zur Zeit befindet sich die Homepage noch im Aufbau, da mir noch Informationen über den Laden fehlen. Die verwendeten Technologien sind React und Materialize.', 
                 linkHomepage: 'https://test-hosting-websites.firebaseapp.com',
                 linkGithub: 'https://github.com/',
-                id: 3 
+                id: 3
             }
         ]
     })
@@ -64,14 +64,14 @@ const NavContextProvider = (props) => {
               text: "is a Webapplication wich I programmed to entertain the user. Just from the user's date of birth the app calculates a lot of funny stuff about the human body. Currently the app is only available in German. I used the technologies React, Redux and Materialize.", 
               linkHomepage: 'https://verrueckte-fakten.firebaseapp.com',
               linkGithub: 'https://github.com/',
-              id: 1 
+              id: 1
             },
 
             { headline: 'Mathe-Nerd', 
               text: 'is an example website for an online blog wich is about mathmatics. For the blog posts I used Markdown Files and Latex. The homepage was written with Gatsby and Tailwind CSS.', 
               linkHomepage: 'https://relaxed-hopper-d3fcc6.netlify.app/',
               linkGithub: 'https://github.com/',
-              id: 2 
+              id: 2
             },
             
               { headline: 'Blankenfelder Hofladen', 

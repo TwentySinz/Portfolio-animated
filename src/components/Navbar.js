@@ -51,20 +51,21 @@ const Navbar = () => {
                                 whileHover={{scale: 1.1,
                                             textShadow: "0px 0px 8px rgb(255,255,255)"}}
                                 transition={{type: 'spring', stiffness:100}}
+                                key={menuItem.id}
                             >           
-                                <NavLink to={menuItem.to} key={menuItem.id} className="text-xl text-white mx-4">{menuItem.item}</NavLink>
+                                <NavLink to={menuItem.to} className="text-xl text-white mx-4">{menuItem.item}</NavLink>
                             </motion.li>
                     )})}
                     <motion.li
                         whileHover={{scale: 1.1}}
                         transition={{type: 'spring', stiffness:100}}
                     >
-                        {!isGerman ? <img src={Deutsch} alt="deutsche Flagge" onClick={() => toggleIsGerman(!isGerman) } className="w-10 h-10 mx-4"/> : 
+                        {isGerman ? <img src={Deutsch} alt="deutsche Flagge" onClick={() => toggleIsGerman(!isGerman) } className="w-10 h-10 mx-4"/> : 
                             <img src={Englisch} alt="english flag" onClick={() => toggleIsGerman(!isGerman) } className="w-10 h-10 mx-2"/>}
                     </motion.li>
                 </ul>
                 <div className="md:hidden">
-                    {!isGerman ? <img src={Deutsch} alt="deutsche Flagge" onClick={() => toggleIsGerman(!isGerman) } className="w-8 h-8 mx-4"/> : 
+                    {isGerman ? <img src={Deutsch} alt="deutsche Flagge" onClick={() => toggleIsGerman(!isGerman) } className="w-8 h-8 mx-4"/> : 
                             <img src={Englisch} alt="english flag" onClick={() => toggleIsGerman(!isGerman) } className="w-8 h-8 mx-2"/>} 
                 </div>
                 </div>
@@ -84,8 +85,9 @@ const Navbar = () => {
                                 whileHover={{scale: 1.1,
                                             textShadow: "0px 0px 8px rgb(255,255,255)"}}
                                 transition={{type: 'spring', stiffness:100}}
+                                key={menuItem.id}
                             >           
-                                <NavLink to={menuItem.to} key={menuItem.id} onClick={ () => setIsOpen(!isOpen) } className="block text-xl text-white p-1">{menuItem.item}</NavLink>
+                                <NavLink to={menuItem.to} onClick={ () => setIsOpen(!isOpen) } className="block text-xl text-white p-1">{menuItem.item}</NavLink>
                             </motion.li>
                     )})}
                 </ul>
