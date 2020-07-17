@@ -37,21 +37,21 @@ const NavContextProvider = (props) => {
             { headline: 'Verrückte Fakten über Dich', 
               text: 'ist eine Webapplikation, die der Unterhaltung dient. Aus einem eingegebenen Geburtsdatum werden diverse Dinge über den menschlichen Körper berechnet und anschließend in einem Text ausgegeben. Die verwendeten Technologien sind React, Redux und Materialize.', 
               linkHomepage: 'https://verrueckte-fakten.firebaseapp.com',
-              linkGithub: 'https://github.com/',
+              linkGithub: 'https://github.com/TwentySinz/Verrueckte-Fakten',
               id: 1 
             },
 
             { headline: 'Mathe-Nerd', 
               text: 'ist eine Beispiel-Website für einen Online Blog, der sich mit Mathematik beschäftigt. Dabei wurden die Blogartikel in Markdown Files erstellt. Die verwendeten Technologien sind Gatsby und Tailwind CSS.', 
               linkHomepage: 'https://relaxed-hopper-d3fcc6.netlify.app/',
-              linkGithub: 'https://github.com/',
+              linkGithub: 'https://github.com/TwentySinz/Gatsby_Demo_Blog',
               id: 2
             },
             
               { headline: 'Blankenfelder Hofladen', 
                 text: 'ist eine Info-Website für einen Hofladen in Berlin. Zur Zeit befindet sich die Homepage noch im Aufbau, da mir noch Informationen über den Laden fehlen. Die verwendeten Technologien sind React und Materialize.', 
                 linkHomepage: 'https://test-hosting-websites.firebaseapp.com',
-                linkGithub: 'https://github.com/',
+                linkGithub: 'https://github.com/TwentySinz/Blankenfelder-Hofladen',
                 id: 3
             }
         ]

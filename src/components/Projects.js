@@ -62,7 +62,7 @@ const Projects = () => {
                         whileHover="hover" 
                         className="inline-block border-2 border-white rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2 md:mb-0"
                     >
-                        Github
+                        <a href={projekt.linkGithub} target="_blank" rel="noopener noreferrer">GitHub</a>
                     </motion.span>
                 </div>  
                 )

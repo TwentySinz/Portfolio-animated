@@ -57,9 +57,9 @@ const Contact = () => {
             method: "POST",
             body: encode(data)
         }).then(
-            () => setStatus("Form submission successful.")
+            () => isGerman ? setStatus("Deine E-mail wurde erfolgreich versendet.") : setStatus("Your E-mail has been.")
         ).catch(
-            error => setStatus("Form submission failed")
+            error => isGerman ? setStatus("Sorry, ein Fehler ist aufgetreten.") : setStatus("Sorry, an error occured.")
         );
         e.preventDefault();
     }
@@ -100,8 +100,9 @@ const Contact = () => {
                     {contactContent[0].send}
                 </motion.button>
                 </form>
+                <h4 className="mt-4 text-lg">{status}</h4>
         </motion.div>
-        <h3>{status}</h3>
+        
         </div>
     )
 }
