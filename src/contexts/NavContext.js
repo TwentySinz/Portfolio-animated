@@ -63,21 +63,21 @@ const NavContextProvider = (props) => {
             { headline: 'Crazy facts about you', 
               text: "is a Webapplication wich I programmed to entertain the user. Just from the user's date of birth the app calculates a lot of funny stuff about the human body. Currently the app is only available in German. I used the technologies React, Redux and Materialize.", 
               linkHomepage: 'https://verrueckte-fakten.firebaseapp.com',
-              linkGithub: 'https://github.com/',
+              linkGithub: 'https://github.com/TwentySinz/Verrueckte-Fakten',
               id: 1
             },
 
             { headline: 'Mathe-Nerd', 
               text: 'is an example website for an online blog wich is about mathmatics. For the blog posts I used Markdown Files and Latex. The homepage was written with Gatsby and Tailwind CSS.', 
               linkHomepage: 'https://relaxed-hopper-d3fcc6.netlify.app/',
-              linkGithub: 'https://github.com/',
+              linkGithub: 'https://github.com/TwentySinz/Gatsby_Demo_Blog',
               id: 2
             },
             
               { headline: 'Blankenfelder Hofladen', 
                 text: 'is an info website for a little grocery store in Berlin. Currently the homepage is still under construction because of missing information about the store. I used the technologies React and Materialize.', 
                 linkHomepage: 'https://test-hosting-websites.firebaseapp.com',
-                linkGithub: 'https://github.com/',
+                linkGithub: 'https://github.com/TwentySinz/Blankenfelder-Hofladen',
                 id: 3 
             }
         ]
